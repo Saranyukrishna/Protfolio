@@ -1,0 +1,113 @@
+/* Unique Certifications Page - Vertical Timeline */
+body.certs-bg {
+    background: linear-gradient(135deg, #232946 0%, #2a3149 100%);
+    min-height: 100vh;
+    color: #e4e6ef;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.main-content h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.cert-box {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cert-content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cert-title {
+    color: #67e8f9;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.cert-org {
+    color: #a5b4fc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cert-date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.cert-desc {
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.cert-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #67e8f9 0%, #a5b4fc 100%);
+    color: #232946;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.cert-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(103, 232, 249, 0.3);
+}
+
+.cert-link i {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-content {
+        padding: 0 1rem;
+    }
+    
+    .cert-content {
+        padding: 1.5rem;
+    }
+}

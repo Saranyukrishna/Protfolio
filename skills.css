@@ -1,0 +1,106 @@
+/* Unique Skills Page - Animated Skill Bars, Neon Badges, AI Icons */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body.skills-bg {
+    background: linear-gradient(120deg, #181a2a 0%, #232946 100%) fixed;
+    min-height: 100vh;
+    color: #e4e6ef;
+    display: flex;
+    flex-direction: column;
+}
+.skills-section {
+    max-width: 900px;
+    margin: 60px auto 40px auto;
+    padding: 0 18px;
+    background: rgba(24,26,42,0.93);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px #a5b4fc33;
+    animation: skillsFadeIn 1.2s cubic-bezier(.4,2,.6,.9);
+}
+@keyframes skillsFadeIn {
+    0% { opacity: 0; transform: scale(0.92) translateY(60px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.skills-section h1 {
+    color: #67e8f9;
+    text-shadow: 0 0 18px #67e8f9aa;
+    font-size: 2.1rem;
+    margin-bottom: 26px;
+    text-align: center;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    margin-bottom: 36px;
+    list-style: none;
+    padding: 0;
+}
+.skill-badge {
+    background: linear-gradient(135deg, #67e8f9 10%, #a5b4fc 90%);
+    color: #232946;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 20px;
+    padding: 12px 24px;
+    box-shadow: 0 2px 18px #a5b4fc55;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1.5px solid #67e8f9;
+    animation: badgePop 1.1s cubic-bezier(.4,2,.6,.9);
+}
+@keyframes badgePop {
+    0% { opacity: 0; transform: scale(0.7); }
+    70% { opacity: 1; transform: scale(1.15); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.skill-badge:hover {
+    transform: scale(1.08) rotate(-3deg);
+    box-shadow: 0 6px 40px #67e8f9cc;
+}
+.skill-icon {
+    font-size: 1.3rem;
+    filter: drop-shadow(0 0 8px #a5b4fc99);
+}
+.skill-bars {
+    margin-top: 18px;
+}
+.skill-bar {
+    margin-bottom: 20px;
+}
+.skill-bar-label {
+    margin-bottom: 6px;
+    color: #a5b4fc;
+    font-weight: 600;
+}
+.skill-bar-outer {
+    background: #232946;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 18px;
+    box-shadow: 0 2px 12px #a5b4fc33;
+}
+.skill-bar-inner {
+    height: 18px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #67e8f9 0%, #f472b6 100%);
+    width: 0;
+    transition: width 1.8s cubic-bezier(.4,2,.6,.9);
+}
+main {
+    flex: 1 0 auto;
+}
+.glass-footer {
+    flex-shrink: 0;
+}
+@media (max-width: 700px) {
+    .skills-section { padding: 18px 6px; }
+    .skills-list { gap: 10px; }
+}

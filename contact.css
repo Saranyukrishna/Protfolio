@@ -1,0 +1,61 @@
+/* Unique Contact Page - Glass Card, Animated Gradient, Neon Icons */
+body.contact-bg {
+    background: linear-gradient(120deg, #232946 0%, #0f1123 100%) fixed;
+    min-height: 100vh;
+    color: #e4e6ef;
+}
+.contact-card {
+    background: rgba(24,26,42,0.92);
+    border-radius: 30px;
+    box-shadow: 0 8px 40px 0 rgba(103,232,249,0.18);
+    padding: 48px 34px 36px 34px;
+    max-width: 400px;
+    margin: 60px auto 40px auto;
+    border: 2.5px solid #67e8f9;
+    position: relative;
+    animation: floatCard 5s ease-in-out infinite alternate;
+}
+@keyframes floatCard {
+    0% { transform: translateY(0) scale(1); box-shadow: 0 8px 40px 0 rgba(103,232,249,0.18); }
+    100% { transform: translateY(-18px) scale(1.03); box-shadow: 0 16px 60px 0 #67e8f9cc; }
+}
+.contact-card h2 {
+    color: #67e8f9;
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 0 18px #67e8f9aa;
+}
+.contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.contact-info-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.13rem;
+    background: rgba(103,232,249,0.11);
+    border-radius: 16px;
+    padding: 12px 20px;
+    box-shadow: 0 2px 16px #67e8f933;
+    transition: background 0.2s;
+}
+.contact-info-list li:hover {
+    background: #67e8f9;
+    color: #181a2a;
+}
+.contact-icon {
+    font-size: 1.5rem;
+    margin-right: 16px;
+    color: #a5b4fc;
+    filter: drop-shadow(0 0 8px #a5b4fc99);
+}
+@media (max-width: 600px) {
+    .contact-card { padding: 22px 6px; }
+}
